@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiro contado com DOM</title>
+    <style>
+        body {
+            background-color: rgb(159, 34, 55);
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>vamos ver do que esse DOM e 
+        capas
+    </h1>
+    <p>aqui vai o resultado</p>
+    <p>começãondo a usar o <strong>DOM</strong> em jascript
+    <div class="msg">  clique em mim</div> 
+    <script>
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[0]
+        //para colocar um id ou nome ou o q quer que seja. colocamos o id 
+        //ou o q for junto da string ex: <p nome = oi> entendeu
+            var e = document.querySelector('div.msg')
+            e.style.background = "blue"
+       
+    </script>
+   
+</body>
+</html>

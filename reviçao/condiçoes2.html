@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fala ae</title>
+</head>
+<body>
+    <h1>verificando seu pais</h1>
+    <p>de qual pais voce e <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="analisar()"></p>
+    <div id="res">
+
+    </div>
+    <script>
+        function analisar(){
+            var txtv = document.querySelector("input#pais")
+            var res = document.querySelector('div#res')
+            var vel = txtv.value /*era so nao converte filha da puta*/
+            res.innerHTML = `voce e de ${vel} .`
+            if(vel == 'brasil'){
+                res.innerHTML = 'olha só, voce e brasileiro'
+            }
+        }
+    </script>
+</body>
+</html>

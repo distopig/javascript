@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>te julgando com base na sua idade'-'</h1>
+    coloca a idade ai browl: <input type="number" name="idade" id="idade">
+    <input type="button" value="verificar" onclick="calculando()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calculando(){
+            var txtv = document.querySelector("input#idade")
+            var res = document.querySelector("div#res")
+            var vel = Number(idade.value)
+            res.innerHTML = `<p>enta sua idade e <strong>${vel}<strong></p>`
+            if (vel > 60) {
+                res.innerHTML += "<p>tome cuidado idoso</p>"
+            } else {
+                res.innerHTML += "<p>vc e jonen ainda AINDA '-'</P>"
+            }
+            }
+
+    </script>
+</body>
+</html>
