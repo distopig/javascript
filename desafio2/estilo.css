@@ -20,6 +20,8 @@ section {
     height: 300px;
     background-size: cover;
     border-radius: 500px;
+    margin: auto;
+    margin-top: 10px;
 }
 footer {
     color: aliceblue;
