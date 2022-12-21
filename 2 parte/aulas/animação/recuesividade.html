@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recursividade</title>
+    <style>
+        #dv{
+            border: 1px solid black;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function contador(min,max){
+            document.write(min + '<br>')
+            if (min < max){
+                contador(++min , max)
+            }
+        }
+        //contador(0, 20)
+        function fatorial(n) {
+            if (n == 1){
+                return 1
+            }
+            return n * fatorial(n - 1)
+        }
+        //document.write(fatorial(12))
+    </script>
+</head>
+<body>
+    <div id="dv"></div>
+    <script>
+        var obj = document.getElementById('dv')
+        var ang = 0
+        var anime
+        function gira(){
+            obj.style.transform = 'rotate('+ang+'deg)'
+            ang++
+            if (ang > 360){
+                ang = 0
+            }
+            anime = requestAnimationFrame(gira)
+        }
+        gira()
+    </script>
+</body>
+</html>

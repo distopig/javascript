@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo</title>
+    <style>
+        #dv{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: #fff;
+        }
+    </style>
+    <script>
+        var tmp
+        function cor(){
+            var obj = document.querySelector('div#dv')
+            var r = Math.floor(Math.random()*255)
+            var g = Math.floor(Math.random()*255)
+            var b = Math.floor(Math.random()*255)
+            obj.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+        }
+        function iniciar(){
+            tmp = setInterval(cor,500)
+        }
+        function parar(){
+            clearInterval(tmp)
+        }
+        function add() {document.querySelector('button#b1').addEventListener('click', iniciar)
+        document.querySelector('button#b2').addEventListener('click', parar)}
+        
+        //var tmp = setTimeout(cor, 2000)
+        window.addEventListener('load', add)
+    </script>
+</head>
+<body>
+    <div id="dv"></div>
+    <br>
+    <button id="b1">iniciar</button>
+    <button id="b2">Parar</button>
+</body>
+</html>
