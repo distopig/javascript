@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula </title>
+    <style>
+        .estilo1{color: red;}
+        .estilo2{color: blue;}
+    </style>
+    <script>
+        function inicia(){
+           var elem = document.getElementById('p2').getAttribute('class')
+           console.log(elem)
+        }
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+    <div id="lista">
+        <p id="p1" class="estilo1">esquerda</p>
+        <p id="p2" class="estilo2"></p>alo</p>
+        <p id="p3"class="estilo1"></p>direita</p>
+        <p id="p4"class="estilo2"></p>arroz</p>
+        <p id="p5"class="estilo1"></p>pirata</p>
+    </div>
+    
+</body>
+</html>

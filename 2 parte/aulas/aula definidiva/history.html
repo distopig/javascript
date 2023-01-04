@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history</title>
+    <script>
+        var painel, bb, bf, go
+        function volta(){
+            window.history.back()
+        }
+        function avanca(){
+            window.history.forward()
+        }
+        function go(){
+            window.history.go(-2)
+        }
+        function inicia(){
+            go = document.getElementById('avanca').addEventListener('click', go)
+            bb = document.getElementById('back').addEventListener('click',volta)
+            bf = document.getElementById('forward').addEventListener('click',avanca)
+            painel = document.getElementById('info')
+            painel.innerHTML = history.length
+        }
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+    <h1>home - '-'</h1>
+    <p id="info"></p>
+
+    <a href="history.html">Home</a>
+    <a href="hp1.html">Pagina 2</a>
+    <a href="hp2.html">Pagina 3</a>
+    <button id="back">Voltar</button>
+    <button id="forward">Avançar</button>
+    <button id="avanca">Voltar 2</button>
+</body>
+</html>

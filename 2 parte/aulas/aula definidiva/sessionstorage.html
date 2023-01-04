@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>coisas '-'</title>
+<script>
+    function pagina(pg){
+        sessionStorage.nome = document.getElementById('fnome').value
+        window.location.assign('s.p' + pg + '.html')
+    }
+    function inicia(){
+        document.getElementById('p2').addEventListener('click', function(){
+            pagina(2)
+        })
+        document.getElementById('p3').addEventListener('click', function(){
+            pagina(3)
+        })
+        document.getElementById('limpar').addEventListener('click', function(){
+            sessionStorage.clear
+        })
+    }
+    window.addEventListener('load', inicia)
+</script>
+</head>
+<body>
+    <input type="text" name="fnome" id="fnome" size="20" maxlength="20"><br><br>
+    <button id="p2">Pagina 2</button>
+    <button id="p3">Pagina 3</button>
+    <button id="limpar">Limpar</button>
+</body>
+</html>

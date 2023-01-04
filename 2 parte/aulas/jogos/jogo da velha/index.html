@@ -76,7 +76,7 @@
         var jogando = true
         var jogadaCpu = 1
         var quemComeca = 1
-        var nivel = 1
+        var nivel = 2
         function cpujoga(){
             if(jogando){
                 var l,c
@@ -87,11 +87,13 @@
                     }while(jogo[l][c] != '')
                     jogo[l][c] = 'O' 
                 }else if(nivel == 2){
-                    //nivel 2
+                    if(jogo[1][1] == ""){
+                        jogo[1][1] = 'O'
+                    }
                 }
                 verifica = verificaVitoria()
                 if(verifica != ''){
-                    alert(verifica + 'venceu')
+                    alert(verifica + ' venceu')
                     jogando = false
                 }
                 atualizaTabuleiro()
@@ -207,7 +209,7 @@
             }
         }
         function inicia(){
-            jogando = true
+            jogando = false
             jogadaCpu = 1
             jogo =[
                 ["","",""],
@@ -220,13 +222,25 @@
                 [document.getElementById('p7'),document.getElementById('p8'),document.getElementById('p9')]
             ]
         }
+        function limpa() {
+            jogando = true
+            var num = Math.round(Math.random()*1)
+            if(num == 0){
+                var jog = 'você'
+            }else{
+                var jog = 'a maquina'
+                quemJoga = 1
+                cpujoga()
+            }
+            var p = document.getElementById('comeca').innerHTML = `${jog} começa`
+        }
         window.addEventListener('load', inicia)
     </script>
 </head>
 <body>
     <div id="menu">
         <p id="comeca"></p>
-        <button onclick="">Inicia jogo</button>
+        <button onclick="limpa()">Inicia jogo</button>
     </div>
     <div id="jogo">
         <div id="p1" class="posJogo" onclick="jogar(1)"></div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objeto window</title>
+    <script>
+        var janela
+        function janela() {
+            janela = window.open("tmp.html","_black")
+        }
+        function fecha(){
+            janela.close()
+        }
+        
+    </script>
+</head>
+<body>
+    <button onclick="janela()">Janela</button>
+    <button onclick="fecha()">Fecha</button>
+    <iframe name="frame" src="" frameborder="0"></iframe>
+</body>
+</html>

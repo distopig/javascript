@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coisassass</title>
+    <script>
+        function inicia(){
+            document.getElementById('destaque').addEventListener('click', function(){
+                var num = document.getElementById('fnum').value
+               var p = document.getElementsByTagName('p')
+               for(var i = 0; i < p.length; i++){
+                p[i].removeAttribute('style')
+               }
+                var at = document.createAttribute('style')
+                at.value = 'color:#f00'
+                p[num].setAttributeNode(at) 
+            })
+            
+        }
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+    <input type="text" id="fnum"><button id="destaque">Destacar</button>
+    <p>esquerda</p>
+    <p>alo</p>
+    <p>direita</p>
+    <p>arroz</p>
+    <p>pirata</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nave</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script type="text/javascript" src="javascript.js">
+        var diryJ, dirxJ
+        function teclaDw(){
+            var tecla = event.keyCode
+            if(tecla == 38){//cima
+                diryJ = -1
+            }else if(tecla == 40){//baixo
+                diryJ = 1
+            }else if(tecla == 37){//esquerda
+                dirxJ = -1
+            }else if(tecla == 39){//direita
+                dirxJ = 1
+            }
+            if(tecla == 32){
+                //tiro
+            }
+        }
+        function teclaUp(){
+            var tecla = event.keyCode
+            if((tecla == 38)||(tecla == 40)){//cima
+                diryJ = -1
+            }
+            }if((tecla == 37)||(tecla == 39)){//esquerda
+                dirxJ = -1
+        }
+
+    </script>
+</head>
+<body>
+    <div id="painel">
+        planeta
+        <div id="medidorPlaneta">
+            <div id="barraPlaneta"></div>
+        </div>
+        <div id="contBombas"></div>
+    </div>
+
+    <div id="telaMsg" class="telaMsg">
+        <button id="btnJogar" class="btnJogar">Jogar</button>
+    </div>
+
+    <div id="naveJog" class="naveJog"><img src="img/n.gif" alt=""></div>
+</body>
+</html>

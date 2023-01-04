@@ -1,0 +1,20 @@
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: white;
+} 
+.naveJog{
+    width: 40px;
+    height: 40px;
+    background-image: url('img/n.gif');
+    position: absolute;
+}
+.telaMsg{
+    position: absolute;
+    margin-left: -25%;
+    top: 50px;
+    left: 50%;
+    width: 700px;
+    height: 600px;
+    display: none;
+}

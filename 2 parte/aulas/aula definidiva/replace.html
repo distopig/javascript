@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assign</title>
+    <script>
+        //location.assign('http://www.youtube.com')
+        //location.replace('http://www.youtube.com')//remove a url do historico
+        function reload(){
+            location.reload()
+        }
+        function p2(){
+            location.assign('rp2.html')
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Objeto Location</h1>
+    <button id="p2" onclick="p2()">Pagina 2</button>
+    <button id="reload" onclick="reload()">Recarregar</button>
+</body>
+</html>

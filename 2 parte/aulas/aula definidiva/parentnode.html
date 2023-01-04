@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula </title>
+    <script>
+        function inicia(){
+            var elem = document.getElementById('lista').childNodes
+            document.getElementById('lista').removeChild(elem[5])
+        }
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+    <div id="lista">
+        <p id="p1">esquerda</p>
+        <p id="p2">alo</p>
+        <p id="p3">direita</p>
+        <p id="p4">arroz</p>
+        <p id="p5">pirata</p>
+    </div>
+    
+</body>
+</html>

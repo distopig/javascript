@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inicia(){
+            document.getElementById('add').addEventListener('click', function(){
+                var lista = document.getElementById('lista')
+                var txt = document.getElementById('fnovo')
+                var li = document.createElement('li')
+                li.textContent = txt.value
+                lista.appendChild(li)
+                txt.value = ''
+                txt.focus()
+            })
+        }
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+    <input type="text" id="fnovo"><button id="add">Adicionar</button><br><br>
+    <ul id="lista">
+
+    </ul>
+</body>
+</html>
