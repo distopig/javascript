@@ -7,7 +7,10 @@
     <title>nave</title>
     <link rel="stylesheet" href="estilo.css">
     <script type="text/javascript" src="javascript.js">
-        var diryJ, dirxJ, jog, vel, pjx, pjy
+    var diryJ, dirxJ, jog,vel, pjx, pjy
+    var telaA, telaC
+    var jogo
+    var frame
     function teclaDw(){
     var tecla = event.keyCode
     if(tecla == 38){//cima
@@ -24,13 +27,45 @@
     }
     }
     function teclaUp(){
-    var tecla = event.keyCode
-    if((tecla == 38)||(tecla == 40)){//cima
+        var tecla = event.keyCode
+        if((tecla == 38)||(tecla == 40)){//cima
         diryJ = -1
     }
     }if((tecla == 37)||(tecla == 39)){//esquerda
         dirxJ = -1
     }
+    function controle(){
+        pjx = dirxJ*vel
+        pjy = diryJ*vel
+        jog.style.top = pjy + 'px'
+        jog.style.left = pjx + 'px'
+    }
+    function loop(){
+        if(jogo){
+            //mecanica
+            controle()
+        }
+        frame = requestAnimationFrame(loop)
+    }
+    function inicia(){
+        jogo =true
+        //ini tela
+        telaA = window.innerHeight
+        telaC = window.innerWidth
+        //ini jogador
+        dirxJ = diryJ = 0
+        pjx = telaC / 2
+        pjy = telaA / 2
+        vel = 5
+        jog = document.getElementById('naveJog')
+        jog.style.top = pjy + 'px'
+        jog.style.left = pjx + 'px'
+        loop()
+    }
+    window.addEventListener('load', inicia)
+    document.addEventListener('keydown', teclaDw)
+    document.addEventListener('keyup', teclaup)
+
     </script>
 </head>
 <body>

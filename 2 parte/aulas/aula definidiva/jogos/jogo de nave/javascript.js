@@ -3,16 +3,20 @@ var telaA, telaC
 var jogo
 var frame
 function controle(){
-
+    pjx = dirxJ*vel
+    pjy = diryJ*vel
+    jog.style.top = pjy + 'px'
+    jog.style.left = pjx + 'px'
 }
 function loop(){
     if(jogo){
         //mecanica
+        controle()
     }
     frame = requestAnimationFrame(loop)
 }
 function inicia(){
-    jogo = false
+    jogo =true
     //ini tela
     telaA = window.innerHeight
     telaC = window.innerWidth
@@ -24,6 +28,7 @@ function inicia(){
     jog = document.getElementById('naveJog')
     jog.style.top = pjy + 'px'
     jog.style.left = pjx + 'px'
+    loop()
 }
 window.addEventListener('load', inicia)
 document.addEventListener('keydown', teclaDw)

@@ -1,0 +1,8 @@
+.div{
+    width: 150px;
+    height: 99px;
+    background-size: 150px 99px;
+    cursor: pointer;
+    background-image: url(cookie1.jfif);
+    display: inline-block;
+}

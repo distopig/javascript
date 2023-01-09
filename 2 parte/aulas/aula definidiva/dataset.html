@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataset</title>
+    <style>
+        .carro{
+            width: 371px;
+            height: 750px;
+            display: inline;
+            cursor: pointer;
+        }
+        #painel{
+            border: solid 3px black;
+            border-radius: 10px;
+            padding: 10px;
+            width: 500px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function define(){
+            var obj = event.target
+            var painel = document.getElementById('painel')
+            painel.innerHTML = 'Cor: ' + obj.dataset.cor + '<hr>'
+            painel.innerHTML += 'Podencia: ' + obj.dataset.pot  + '<hr>'
+            painel.innerHTML += 'Velocidade: ' + obj.dataset.vel + '<hr>'
+            
+        }
+        function inicia(){
+            document.getElementById('c1').addEventListener('click', define)
+            document.getElementById('c2').addEventListener('click', define)
+            document.getElementById('c3').addEventListener('click', define)
+            document.getElementById('c4').addEventListener('click', define)
+        }
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+    <div id="painel"></div>
+    <div id="c1" class="carro" data-cor="Branco" data-pot="110" data-vel="180">carro</div>
+    <div id="c2" class="carro"data-cor="vermelho" data-pot="200" data-vel="274">carro</div>
+    <div id="c3" class="carro"data-cor="amarelo" data-pot="150" data-vel="210">carro</div>
+    <div id="c4" class="carro"data-cor="Preto" data-pot="143" data-vel="203">carro</div>
+</body>
+</html>

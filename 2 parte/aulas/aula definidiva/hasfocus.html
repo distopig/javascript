@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hasfocus</title>
+    <script>
+        setInterval(foco,0)
+        function foco(){
+            var res = document.getElementById('nao')
+            if(document.hasFocus()){
+                res.innerHTML = ''
+            }else{
+                document.getElementById('corpo').style.backgroundColor = '#000000'
+            }
+        }
+    </script>
+</head>
+<body id="corpo">
+    <div>Pagina <span id="nao"></span> está em foco</div>
+</body>
+</html>

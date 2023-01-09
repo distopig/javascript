@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elemento</title>
+    <script>
+        function ativo(){
+            var cx = document.getElementById('texto')
+            var elem = document.activeElement
+            var selecao = elem.value.substring(elem.selectionStar,elem.selectionEnd)
+            cx.innerHTML = selecao
+        }
+        function inicia(){
+            var txt = document.getElementById('original')
+            txt.addEventListener('mouseup', ativo)
+
+        }
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+    <textarea id="original" cols="30" rows="10">aprendendo alguma coisa '-'</textarea><br>
+    texte selecionado: <span id="texto"></span>
+</body>
+</html>
